@@ -13,6 +13,7 @@ int main() {
     int matrix2[100][100];
     int size;
     
+    cout << "Connor Schroeder" << endl << "Lab #6: Matrix manipulation" << endl << endl;
     readMatrices("matrix_input.txt", size, matrix1, matrix2);
     printMatrix("Matrix A:", size, matrix1);
     printMatrix("Matrix B:", size, matrix2);
