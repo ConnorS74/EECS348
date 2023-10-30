@@ -1,0 +1,37 @@
+<html>
+ <head>
+  <style>
+   h1 {font-family: Avantgarde, sans-serif;
+       color: Blue;}
+   p {border-style: solid;
+      border-width: 5px;}
+  </style>
+  <script>
+   function change() {
+    var borderRGB = document.querySelector("input").value.split(",");
+    var borderWidth = document.querySelectorAll("input")[1].value;
+    var backgroundRGB = document.querySelectorAll("input")[2].value.split(",");
+    for (let i = borderRGB.length; i < 3; i++) {
+     borderRGB.push(0);
+    }
+    for (let i = backgroundRGB.length; i < 3; i++) {
+     backgroundRGB.push(0);
+    }
+    document.querySelector("p").style.borderColor = `rgb(${borderRGB[0]}, ${borderRGB[1]}, ${borderRGB[2]})`;
+    document.querySelector("p").style.borderWidth = borderWidth;
+    document.querySelector("p").style.backgroundColor = `rgb(${backgroundRGB[0]}, ${backgroundRGB[1]}, ${backgroundRGB[2]})`;
+   }
+  </script>
+ </head>
+ <body>
+  <h1>EECS 348 Lab 7: Practice 2</h1>
+  <p>You can alter this element's border and text with the textboxes below.</p>
+  <label>Border's RGB values:</label>
+  <input type="text" value="0, 0, 0"></input><br>
+  <label>Border width:</label>
+  <input type="text" value="5"></input><br>
+  <label>Background's RGB values:</label>
+  <input type="text" value="255, 255, 255"></input><br>
+  <button onclick="change()">Apply changes</button>
+ </body>
+</html>

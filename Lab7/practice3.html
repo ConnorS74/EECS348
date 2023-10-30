@@ -1,0 +1,31 @@
+<html>
+ <head>
+  <style>
+   h1 {font-family: Avantgarde, sans-serif;
+       color: Blue;}
+  </style>
+  <script>
+   function verify() {
+    let first = document.querySelector("input").value;
+    let second = document.querySelectorAll("input")[1].value;
+    if (first.length < 8) {
+     alert("The first password is less than 8 characters long!");
+    } else if (second.length < 8) {
+     alert("The second password is less than 8 characters long!");
+    } else if (first == second) {
+     alert("The passwords match!");
+    } else {
+     alert("The passwords don't match!");
+    }
+   }
+  </script>
+ </head>
+ <body>
+  <h1>EECS 348 Lab 7: Practice 3</h1>
+  <label>First password:</label>
+  <input type="text"></input><br>
+  <label>Second password:</label>
+  <input type="text"></input><br>
+  <button onclick="verify()">Verify</button>
+ </body>
+</html>
